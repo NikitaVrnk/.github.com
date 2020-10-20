@@ -1,0 +1,535 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+/* Подключение шрифта*/
+@font-face {
+  font-family: "Exo2.0-Thin";
+  src: url("../../fonts/Exo2.0-Thin.eot");
+  src: local("☺"), url("../../fonts/Exo2.0-Thin.woff") format("woff"), url("../../fonts/Exo2.0-Thin.ttf") format("truetype"), url("../../fonts/Exo2.0-Thin.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+/*--------------------*/
+/*Глобальные стили*/
+body {
+  font-family: "Trebuchet MS";
+  font-weight: 400;
+  background: url("../img/Pattern.png");
+}
+
+.h1-style {
+  font-family: "Exo2.0-Thin";
+  text-shadow: 0 1px 0 #000;
+  color: #fff;
+  font-size: 36px;
+}
+
+.h2-style {
+  font-weight: 700;
+  font-size: 48px;
+  color: #000;
+}
+
+.h3-style {
+  font-weight: 700;
+  font-size: 24px;
+  color: #000;
+}
+
+.h4-style {
+  font-size: 16px;
+  color: #666666;
+}
+
+.span-style_bold {
+  font-weight: 700;
+}
+
+/*--------------------*/
+/*Скрытые блоки*/
+.h4-style_none {
+  display: none;
+  color: #e62e7a;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.span-style_none {
+  display: none;
+}
+
+.span2-style_none {
+  display: none;
+}
+
+/*---------------------*/
+/* Изменение цвета при наведении*/
+.content-product-item1:hover .item1-description-cats_weight {
+  background-color: #2ea8e6;
+}
+
+.content-product-item2:hover .item2-description-cats_weight {
+  background-color: #2ea8e6;
+}
+
+/*----------------------*/
+/*Изменение цвета при клике*/
+.input:checked + .content-product-item1 .product-item1-description {
+  background: url("..//..//img/Back_red.png") no-repeat center center;
+  background-size: 100% 100%;
+}
+.input:checked + .content-product-item1 .item1-description-cats_weight {
+  background-color: #e62e7a;
+}
+.input:checked + .content-product-item1 .span-style {
+  display: none;
+}
+.input:checked + .content-product-item1 .span-style_none {
+  display: block;
+}
+
+.input:checked + .content-product-item2 .product-item2-description {
+  background: url("..//..//img/Back_red.png") no-repeat center center;
+  background-size: 100% 100%;
+}
+.input:checked + .content-product-item2 .item2-description-cats_weight {
+  background-color: #e62e7a;
+}
+.input:checked + .content-product-item2 .span-style {
+  display: none;
+}
+.input:checked + .content-product-item2 .span2-style_none {
+  display: block;
+}
+
+/*---------------------*/
+/*Применение Hover если курсор ушел с нужного блока*/
+.input:checked + .content-product-item1:not(:hover) .h4-style {
+  display: none;
+}
+.input:checked + .content-product-item1:not(:hover) .h4-style_none {
+  display: block;
+}
+.input:checked + .content-product-item1:not(:hover) .span-style {
+  display: block;
+}
+.input:checked + .content-product-item1:not(:hover) .span-style_none {
+  display: none;
+}
+.input:checked + .content-product-item1:not(:hover) .item1-description-cats_weight {
+  background-color: #d91667;
+}
+
+.input:checked + .content-product-item2:not(:hover) .h4-style {
+  display: none;
+}
+.input:checked + .content-product-item2:not(:hover) .h4-style_none {
+  display: block;
+}
+.input:checked + .content-product-item2:not(:hover) .span-style {
+  display: block;
+}
+.input:checked + .content-product-item2:not(:hover) .span2-style_none {
+  display: none;
+}
+.input:checked + .content-product-item2:not(:hover) .item2-description-cats_weight {
+  background-color: #d91667;
+}
+
+/*-------------------*/
+.input {
+  display: none;
+}
+
+.label {
+  width: 320px;
+  margin: 0 40px;
+}
+
+.wrapper {
+  min-height: 100%;
+  max-width: 100%;
+  display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  flex: 1 1 auto;
+  min-height: 600px;
+  width: 1280px;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center;
+}
+
+.content-top {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+.content-product {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  justify-content: center;
+  min-height: 510px;
+  width: 100%;
+  margin: 20px 0 0 0;
+}
+
+/*---------PRODUCT 1---------*/
+.content-product-item1 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-item1-description {
+  background: url("..//..//img/Back_blue.png") no-repeat center center;
+  background-size: 100% 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  height: 100%;
+}
+
+.item1-description-text {
+  padding: 24px 0px 0px 49px;
+}
+
+.item1-description-brand {
+  padding: 10px 0px 0px 49px;
+}
+
+.item1-description-tasty {
+  padding: 3px 0px 0 49px;
+}
+
+.item1-description-reserve {
+  color: #666666;
+  font-size: 14px;
+  padding: 20px 0px 0 49px;
+}
+
+.item1-description-bonus {
+  color: #666666;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 4px 0px 0 49px;
+  flex: 1 1 auto;
+}
+
+.item1-description-cats {
+  padding: 16px 0 4px 4px;
+}
+
+.item1-description-cats_weight {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  min-width: 81px;
+  height: 81px;
+  background-color: #1698d9;
+  border-radius: 50%;
+  text-align: center;
+  padding: 25px 0 0 0;
+}
+.item1-description-cats_weight span:first-child {
+  font-size: 42px;
+  line-height: 22px;
+  color: #ffffff;
+}
+.item1-description-cats_weight span:last-child {
+  font-size: 22px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.item1-info {
+  font-size: 14px;
+  color: #fff;
+  padding: 10px 0 3px 0;
+  width: 320px;
+  text-align: center;
+}
+.item1-info a {
+  color: #1698d9;
+  font-weight: 700;
+  border-bottom: 1px dashed #1698d9;
+}
+
+/*---------PRODUCT 2---------*/
+.content-product-item2 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-item2-description {
+  display: flex;
+  flex-direction: column;
+  background: url("..//..//img/Back_blue.png") no-repeat center center;
+  background-size: 100% 100%;
+  position: relative;
+  max-width: 320px;
+  height: 100%;
+}
+
+.item2-description-text {
+  padding: 24px 0px 0px 49px;
+}
+
+.item2-description-brand {
+  padding: 10px 0px 0px 49px;
+}
+
+.item2-description-tasty {
+  padding: 3px 0px 0 49px;
+}
+
+.item2-description-reserve {
+  color: #666666;
+  font-size: 14px;
+  padding: 20px 0px 0 49px;
+}
+
+.item2-description-bonus {
+  color: #666666;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 4px 0px 0 49px;
+  flex: 1 1 auto;
+}
+
+.item2-description-cats {
+  padding: 30px 0px 4px 4px;
+}
+
+.item2-description-cats_weight {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  width: 81px;
+  height: 81px;
+  background-color: #1698d9;
+  border-radius: 50%;
+  text-align: center;
+  padding: 25px 0 0 0;
+}
+.item2-description-cats_weight span:first-child {
+  font-size: 42px;
+  line-height: 22px;
+  color: #ffffff;
+}
+.item2-description-cats_weight span:last-child {
+  font-size: 22px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.item2-info {
+  letter-spacing: -0.4px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  padding: 10px 0 3px 0;
+}
+.item2-info a {
+  color: #1698d9;
+  font-weight: 700;
+  border-bottom: 1px dashed #1698d9;
+}
+
+/*---------PRODUCT 3---------*/
+.content-product-item3 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/*Доступность товара*/
+.img_access_product {
+  background: url("..//..//img/Back_grey.png") no-repeat center center;
+  background-size: 100% 100%;
+  height: 100%;
+}
+
+/*-----------------*/
+.product-item3-description {
+  display: flex;
+  flex-direction: column;
+  background: url("..//..//img/Back_grey.png") no-repeat center center;
+  background-size: 100% 100%;
+  position: relative;
+  height: 100%;
+  max-width: 320px;
+  opacity: 0.5;
+}
+
+.item3-description-text {
+  padding: 24px 0px 0px 49px;
+}
+
+.item3-description-brand {
+  padding: 10px 0px 0px 49px;
+}
+
+.item3-description-tasty {
+  padding: 3px 0px 0 49px;
+}
+
+.item3-description-reserve {
+  color: #666666;
+  font-size: 14px;
+  padding: 20px 0px 0 49px;
+}
+
+.item3-description-bonus {
+  color: #666666;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 3px 0px 0 49px;
+  flex: 1 1 auto;
+}
+
+.item3-description-cats {
+  padding: 15px 0 4px 4px;
+}
+
+.item3-description-cats_weight {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  min-width: 81px;
+  height: 81px;
+  background-color: #b3b3b3;
+  border-radius: 50%;
+  text-align: center;
+  padding: 25px 0 0 0;
+}
+.item3-description-cats_weight span:first-child {
+  font-size: 42px;
+  line-height: 22px;
+  color: #ffffff;
+}
+.item3-description-cats_weight span:last-child {
+  font-size: 22px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.item3-info {
+  font-size: 14px;
+  color: #a1a140;
+  padding: 10px 0 3px 0;
+  text-align: center;
+}
+.item3-info a {
+  color: #1698d9;
+  font-weight: 700;
+}
+
+/*Адаптив*/
+@media (max-width: 1199px) {
+  .label {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 400px) {
+  .label {
+    margin-top: 10px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .item1-description-cats,
+.item2-description-cats,
+.item3-description-cats {
+    padding-top: 0px;
+  }
+
+  .content-product {
+    margin: 0;
+  }
+
+  .content-top {
+    justify-content: center;
+  }
+}
